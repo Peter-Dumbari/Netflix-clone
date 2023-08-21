@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Collapse.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 function CollapsibleItem({ title, children }) {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -10,12 +12,12 @@ function CollapsibleItem({ title, children }) {
   };
 
   return (
-    <div className="collapsible-item">
+    <div className={`collapsible-item ${isCollapsed ? '' : 'collapsed'}`}>
       <div className="collapsible-header">
         <button type="button" onClick={toggleCollapse}>
           {title}
           <div className="icon">
-            <span>{isCollapsed ? 'icon' : 'crossed icon'}</span>
+            <FontAwesomeIcon icon={isCollapsed ? faPlus : faTimes} />
           </div>
         </button>
       </div>
