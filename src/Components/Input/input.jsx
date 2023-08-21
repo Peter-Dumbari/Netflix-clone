@@ -13,6 +13,11 @@ function Input({ bordercolor }) {
 }
 
 Input.propTypes = {
-  bordercolor: PropTypes.string.isRequired,
+  bordercolor: PropTypes.string,
 };
+
+Input.defaultProps = {
+  bordercolor: null,
+};
+
 export default Input;
