@@ -1,0 +1,26 @@
+.input_field {
+  padding: 15px;
+  width: 100%;
+  background-color: #0000006b;
+  border: 1px solid #504f4f;
+  border-radius: 3px;
+
+  &::placeholder {
+    font-family: "Netflix Sans", sans-serif;
+    font-weight: 400;
+    color: #a5a3a3;
+  }
+
+  &:focus {
+    outline: gray auto 0.5px;
+  }
+}
+
+.green {
+  border-color: #256e52 !important;
+  border: 2px solid;
+
+  &:focus {
+    outline: #256e52 auto 0.5px;
+  }
+}
